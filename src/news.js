@@ -1,5 +1,5 @@
 import React from "react";
-// import spinner from "./spinner.gif"; // Make sure to import your spinner GIF
+import spinner from "./spinner.gif"; // Make sure to import your spinner GIF
 
 class News extends React.Component {
   constructor(props) {
@@ -54,11 +54,11 @@ class News extends React.Component {
   render() {
     return (
       <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-1">
-        {/* {this.state.loading ? (
+        {this.state.loading ? (
           <img src={spinner} alt="Loading" style={{ width: "300px", margin: "auto" }} />
         ) : (
           this.state.name1
-        )} */}
+        )}
         <button
           class="font-bold text-xl mb-2"
           onClick={() => this.fetchData()} // Reload icon, calls fetchData when clicked
