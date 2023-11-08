@@ -3,46 +3,30 @@
 
 import React from 'react';
 import './App.css'; // Import your CSS styles if needed
-import { Switch } from 'react-router';
-
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import News from './news';
 import Nav from './nav';
 import LoginPage from './LoginPage'; // Import the LoginPage component
 import RegisterPage from './RegisterPage'; // Import the RegisterPage component
-
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Nav />
-        <Switch>
-        <Route path="/login">
-            <LoginPage /> 
-          </Route>
-          <Route path="/register">
-            <RegisterPage /> 
-          </Route>
-          <Route path="/Apple">
-            <News newsName="iphone" />
-          </Route>
-          <Route path="/Tesla">
-            <News newsName="tesla" />
-          </Route>
-          <Route path="/Bitcoin">
-            <News newsName="bitcoin" />
-          </Route>
-          <Route path="/Nasa">
-            <News newsName="nasa" />
-          </Route>
-          <Route path="/upsc">
-            <News newsName="upsc" />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/Apple" element={<News newsName="iphone" />} />
+          <Route path="/Tesla" element={<News newsName="tesla" />} />
+          <Route path="/Bitcoin" element={<News newsName="bitcoin" />} />
+          <Route path="/Nasa" element={<News newsName="nasa" />} />
+          <Route path="/upsc" element={<News newsName="upsc" />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
 }
+
 
 export default App;
