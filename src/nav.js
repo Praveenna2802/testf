@@ -15,9 +15,8 @@ let n=<header class="text-gray-600 body-font">
       <Link class="mr-5 hover:text-gray-900" to="/Bitcoin">Bitcoin</Link>
       <Link class="mr-5 hover:text-gray-900" to="/Nasa">Nasa</Link>
       <Link class="mr-5 hover:text-gray-900" to="/upsc">upsc</Link>
-      <Link className="mr-5 hover:text-gray-900" to="/login">Login</Link>
-          <Link className="mr-5 hover:text-gray-900" to="/register">Register</Link>
-        
+  <Link class="mr-5 hover:text-gray-900" to="/login">Login</Link>
+          <Link class="mr-5 hover:text-gray-900" to="/register">Register</Link>
      
     </nav>
     <input type="text" className="text-base" />
